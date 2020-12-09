@@ -54,7 +54,7 @@ const Register: React.FC = () => {
     <IonPage>
       <IonLoading message={'Just a sec..'} duration={0} isOpen={loading}></IonLoading>
       <IonContent fullscreen>
-      <IonImg class="image" src={logo} />
+      <IonImg class="imageRegister" src={logo} />
         <IonCard>
         <IonItem>
             <IonInput placeholder="Email" onIonChange={(e: any) => setEmail(e.detail.value)} ></IonInput>

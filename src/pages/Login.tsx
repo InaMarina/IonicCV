@@ -2,7 +2,6 @@ import React, { useEffect, useState} from 'react';
 import { IonContent, IonImg, IonItem, IonButton, IonInput, IonPage,  IonText, IonCard, IonLoading } from '@ionic/react';
 
 import {login, getUser} from '../firebaseConfig'
-//import {toast} from '../toast'
 
 import './Login.css'
 import logo from '../assets/logo1.png'
@@ -29,7 +28,7 @@ const Login: React.FC = () => {
 
   console.log(isAuthed)
   if(isAuthed === true){
-    window.location.href = '/makepage' 
+    window.location.href = '/profile' 
 
   } 
 
@@ -38,8 +37,7 @@ const Login: React.FC = () => {
     const response = await login(email, password)
 
     if(response){
-    //ionic serve lab  toast('Login successfull')
-      window.location.href = '/makepage' 
+      window.location.href = '/profile' 
     }
     setLoading(false)
   }
@@ -48,7 +46,7 @@ const Login: React.FC = () => {
     <IonPage>
       <IonLoading message={'Just a sec..'} duration={0} isOpen={loading}></IonLoading>
       <IonContent fullscreen>
-        <IonImg class="image" src={logo} />
+        <IonImg class="imageLogin" src={logo} />
           <IonCard>
             <IonItem>
               <IonInput placeholder="email" onIonChange={(e: any) => setEmail(e.detail.value)} ></IonInput>

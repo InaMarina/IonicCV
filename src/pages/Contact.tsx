@@ -1,6 +1,5 @@
 import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonButtons,IonMenuButton } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
 import './Contact.css';
 
 import MenuButton from '../components/MenuButton'
@@ -23,7 +22,6 @@ const Contact: React.FC = () => {
             <IonTitle size="large">Contact</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Contact page" />
       </IonContent>
     </IonPage>
     </>

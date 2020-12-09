@@ -2,7 +2,9 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
-      //toast(e.message)
+//Toastfunction to show error messages
+import {toast} from './components/toast'
+
 
 //firebase configuration
 const firebaseConfig = {
@@ -16,21 +18,23 @@ const firebaseConfig = {
 
   firebase.initializeApp(firebaseConfig)
 
-  //function for login provided by firebase auth
+  //function for login provided by firebase auth, error shown with toast
   export async function login(email: string, password: string){
     try{
       const response = await firebase.auth().signInWithEmailAndPassword(email, password)
       return true
     } catch (e){
+      toast(e.message)
       return false
     }
   }
-  //function for login provided by firebase auth
+  //function for login provided by firebase auth, error shown with toast
   export async function register(email: string, password: string){
     try{
       const response = await firebase.auth().createUserWithEmailAndPassword(email, password)
       return true
     } catch (e){
+      toast(e.message)
       return false
 
     }

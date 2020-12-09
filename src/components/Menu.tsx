@@ -65,7 +65,6 @@ const Menu:  React.FC = () => {
               Contact
             </IonButton>
           </IonItem>
-
         </IonList>
         <IonButton class="logOutItem" expand="full" onClick={logOutUser}>
               LOG OUT
@@ -73,6 +72,6 @@ const Menu:  React.FC = () => {
       </IonContent>
     </IonMenu>
     </>
-    )
-    }
-    export default Menu;
+)}
+
+export default Menu;

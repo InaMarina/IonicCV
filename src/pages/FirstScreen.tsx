@@ -14,7 +14,7 @@ const FirstScreen: React.FC = () => {
       <IonPage>
         <IonContent fullscreen >
         <IonGrid>
-          <IonImg class="image" src={logo} />
+          <IonImg class="imageFirstscreen" src={logo} />
         </IonGrid>
         <IonGrid class="text">
           <IonText>Welcome to the CV of one future superstar developer. 
