@@ -1,0 +1,8 @@
+.centerSignup {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+.image {
+  margin: 20%;
+}
