@@ -1,14 +1,17 @@
 import React from 'react';
-import { IonButton, IonMenu, IonList, IonItem,IonIcon, IonContent, IonHeader, IonTitle, IonToolbar,} from '@ionic/react';
+//Importing core components
+import { IonButton, IonMenu, IonList, IonItem,IonIcon, IonContent, IonHeader, IonTitle, IonToolbar, IonMenuToggle,} from '@ionic/react';
+//Importing Icons
 import { codeDownloadOutline, personCircleOutline, schoolOutline, bagCheckOutline, barbellOutline, paperPlaneOutline } from 'ionicons/icons';
-
+//Importing logoutfunction from config-file
 import {logout} from '../firebaseConfig'
-
+//style
 import './Menu.css';
 
 
 const Menu:  React.FC = () => {
 
+  //Logout function that is launched by logout-button in side menu  
     const logOutUser = async() => {
         const response = await logout()
         if(response){
@@ -29,6 +32,7 @@ const Menu:  React.FC = () => {
       </IonHeader>
       <IonContent id="content">
         <IonList>
+          <IonMenuToggle>
           <IonItem>
             <IonIcon icon={personCircleOutline} size="large"></IonIcon>
             <IonButton class="buttonItem" fill="clear" expand="block" routerLink="/profile">
@@ -65,10 +69,11 @@ const Menu:  React.FC = () => {
               Contact
             </IonButton>
           </IonItem>
+          </IonMenuToggle>
         </IonList>
         <IonButton class="logOutItem" expand="full" onClick={logOutUser}>
-              LOG OUT
-            </IonButton>
+          LOG OUT
+        </IonButton>
       </IonContent>
     </IonMenu>
     </>

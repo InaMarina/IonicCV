@@ -35,7 +35,7 @@ const AppStack: React.FC = () => (
             <Route path="/contact" component={Contact} exact={true}/>
             <Route path="/" render={() => <Redirect to="/Profile" />} exact={true} />
           </IonRouterOutlet>
-          <IonTabBar slot="bottom">
+          <IonTabBar slot="bottom" >
             <IonTabButton tab="Profile" href="/profile">
               <IonIcon icon={personCircleOutline} />
             </IonTabButton>

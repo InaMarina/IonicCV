@@ -1,10 +1,15 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonButtons,IonMenuButton } from '@ionic/react';
-import './Contact.css';
-
+//import core components
+import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonItem, IonLabel, IonPage, IonRow, IonText, IonTitle, IonToolbar} from '@ionic/react';
+//Importing icons
+import { logoGithub, callOutline, mailOutline, logoLinkedin } from 'ionicons/icons';
+//Import own components
 import MenuButton from '../components/MenuButton'
 import Menu from '../components/Menu'
+//Style
+import './Contact.css';
 
+//Contact page
 const Contact: React.FC = () => {
   return (
     <>
@@ -17,11 +22,42 @@ const Contact: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Contact</IonTitle>
-          </IonToolbar>
-        </IonHeader>
+        <IonCard>
+        <IonCardHeader >
+            <IonCardTitle class="spacing">Don't hesitate to contact me if you are looking for a developer!</IonCardTitle>
+            <IonCardSubtitle class="spacing">I'm currently employed, but I'm always intersted in new opportunities.</IonCardSubtitle>
+          </IonCardHeader>
+          <IonCardContent class="spacingContent">
+            <IonText>You can email me at:</IonText>
+            <br/>
+            <IonText color="primary">marina.jarvinen@student.laurea.fi </IonText>
+            <br/>
+            <br/>
+            <IonText>Or contact me through GitHub or LinkedIn:</IonText>
+            <br/>
+            <br/>
+            <IonButton class="spacing"
+              expand="block" 
+              fill="outline" 
+              onClick={()=> {window.open('https://github.com/InaMarina', '_system')}}>
+              <IonIcon icon={logoGithub} size="large"></IonIcon>
+              <IonLabel class="label">
+                My GitHub
+              </IonLabel>
+            </IonButton>   
+
+            <IonButton 
+              expand="block" 
+              fill="outline" 
+              onClick={()=> {window.open('https://www.linkedin.com/in/marina-j%C3%A4rvinen-profile/', '_system')}}>
+              <IonIcon icon={logoLinkedin} size="large"></IonIcon>
+              <IonLabel class="label">
+               My LinkedIn
+              </IonLabel>
+            </IonButton>   
+        </IonCardContent>
+        </IonCard>
+ 
       </IonContent>
     </IonPage>
     </>

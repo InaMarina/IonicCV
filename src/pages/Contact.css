@@ -1,0 +1,16 @@
+.textContact {
+  margin: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.spacing {
+  margin-left: 1%;
+  margin-top: 5%;
+  padding-bottom: 5%;
+}
+.spacingContent {
+  margin-left: 1%;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}

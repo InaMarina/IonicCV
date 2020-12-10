@@ -14,7 +14,7 @@ const Profile: React.FC = () => {
     <>    
     <Menu />
     <IonPage>
-      <IonHeader>
+      <IonHeader >
         <IonToolbar>
           <MenuButton />
           <IonTitle>Profile</IonTitle>
