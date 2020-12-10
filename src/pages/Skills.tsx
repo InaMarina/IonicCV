@@ -4,6 +4,7 @@ import {
   IonCard, 
   IonCardContent, 
   IonCardHeader, 
+  IonCardSubtitle, 
   IonCardTitle, 
   IonContent, 
   IonHeader, 
@@ -18,10 +19,12 @@ import Menu from '../components/Menu'
 //Import pictures
 import techskills from '../assets/techskills.png'
 import softskills from '../assets/softskills.png'
+import languages from '../assets/languages.png'
+
 //Import style
 import './Skills.css';
 
-//Shows who cards, one contain picture of softskills one of techskills
+//Shows who cards, one contain picture of softskills one of techskills and languages
 const Skills: React.FC = () => {
   return (
     <>
@@ -41,7 +44,7 @@ const Skills: React.FC = () => {
           <IonImg src={techskills} />
           <IonCardContent>
         </IonCardContent>
-        </IonCard>
+      </IonCard>
       <IonCard>
           <IonCardHeader>
             <IonCardTitle>Soft skills</IonCardTitle>
@@ -49,7 +52,22 @@ const Skills: React.FC = () => {
           <IonImg src={softskills} />
           <IonCardContent>
         </IonCardContent>
-        </IonCard>
+      </IonCard>
+      <IonCard>
+          <IonCardHeader>
+            <IonCardTitle>Languages</IonCardTitle>
+          </IonCardHeader>
+          <IonImg src={languages} />
+          <IonCardSubtitle>
+            Finnish: Fluent 
+            </IonCardSubtitle>
+            <IonCardSubtitle>
+            Swedish: Fluent
+            </IonCardSubtitle>
+            <IonCardSubtitle>
+            English: Fluent
+          </IonCardSubtitle>
+      </IonCard>
       </IonContent>
     </IonPage>
     </>
