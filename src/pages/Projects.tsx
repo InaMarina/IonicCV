@@ -1,18 +1,31 @@
 import React from 'react';
 //Importing core components
-import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonImg, IonPage, IonRow, IonText, IonTitle, IonToolbar } from '@ionic/react';
+import { 
+  IonButton, 
+  IonCard, 
+  IonCardContent, 
+  IonCardHeader, 
+  IonCardSubtitle, 
+  IonCardTitle, 
+  IonContent, 
+  IonGrid, 
+  IonHeader, 
+  IonIcon, 
+  IonImg, 
+  IonPage, 
+  IonRow, 
+  IonText, 
+  IonTitle, 
+  IonToolbar } 
+  from '@ionic/react';
 //Importing icon
 import { logoGithub } from 'ionicons/icons';
-
 //Importing own components
 import MenuButton from '../components/MenuButton'
 import Menu from '../components/Menu'
 //Importing pictures
 import Ion1 from '../assets/project1.png'
 import RN1 from '../assets/project2.png'
-import Ion3 from '../assets/project3.png'
-import Ion4 from '../assets/project4.png'
-
 //Style
 import './Projects.css';
 

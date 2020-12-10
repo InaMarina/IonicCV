@@ -1,13 +1,25 @@
 import React from 'react';
-import { IonImg, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons, IonMenuButton, IonGrid, IonCol, IonRow, IonText, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent } from '@ionic/react';
-
-
-import './Profile.css';
+//Importing core components
+import {
+  IonImg, 
+  IonContent, 
+  IonHeader, 
+  IonPage, 
+  IonTitle, 
+  IonToolbar, 
+  IonCard, 
+  IonCardHeader, 
+  IonCardSubtitle, 
+  IonCardTitle, 
+  IonCardContent } 
+  from '@ionic/react';
+//Importing picture
 import face from '../assets/face.png'
-
-
+//Importing own components
 import MenuButton from '../components/MenuButton'
 import Menu from '../components/Menu'
+//Importing style
+import './Profile.css';
 
 const Profile: React.FC = () => {
   return (

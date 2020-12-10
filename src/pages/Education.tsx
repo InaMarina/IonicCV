@@ -23,8 +23,7 @@ import uni from '../assets/uni.png'
 import axxell from '../assets/axxell.png'
 import arcada from '../assets/arcada.png'
 
-
-
+//Cards that present education: Logo of school, title of study + description
 const Education: React.FC = () => {
   return (
     <>

@@ -1,13 +1,20 @@
 import React from 'react';
 //imports for core components
-import { IonButton,  IonContent, IonPage, IonImg, IonGrid, IonText, } from '@ionic/react';
+import { 
+  IonButton,  
+  IonContent, 
+  IonPage, 
+  IonImg, 
+  IonGrid, 
+  IonText, 
+} from '@ionic/react';
 //import style
 import './FirstScreen.css'
-
+//Import picture
 import logo from '../assets/logo1.png'
 
-
-//FirstScreen component
+//FirstScreen component: logopicture + button with navigation to login page 
+//and button with navigation to register page
 const FirstScreen: React.FC = () => {
   
     return (

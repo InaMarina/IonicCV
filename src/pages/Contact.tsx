@@ -1,15 +1,30 @@
 import React from 'react';
 //import core components
-import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonItem, IonLabel, IonPage, IonRow, IonText, IonTitle, IonToolbar} from '@ionic/react';
+import { 
+  IonButton, 
+  IonCard, 
+  IonCardContent, 
+  IonCardHeader, 
+  IonCardSubtitle, 
+  IonCardTitle, 
+  IonContent, 
+  IonHeader, 
+  IonIcon, 
+  IonLabel, 
+  IonPage, 
+  IonText, 
+  IonTitle, 
+  IonToolbar} 
+  from '@ionic/react';
 //Importing icons
-import { logoGithub, callOutline, mailOutline, logoLinkedin } from 'ionicons/icons';
+import { logoGithub, logoLinkedin } from 'ionicons/icons';
 //Import own components
 import MenuButton from '../components/MenuButton'
 import Menu from '../components/Menu'
 //Style
 import './Contact.css';
 
-//Contact page
+//Contact page - simple card with text and buttons with external links to linkedin & github
 const Contact: React.FC = () => {
   return (
     <>

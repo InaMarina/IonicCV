@@ -22,6 +22,7 @@ const Menu:  React.FC = () => {
         }
       }
 
+  //renders the menu list 
     return(
       <>    
       <IonMenu side="start" contentId="content" >

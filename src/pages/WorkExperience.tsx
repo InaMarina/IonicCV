@@ -1,12 +1,24 @@
 import React from 'react';
-import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonHeader, IonIcon, IonImg, IonItem, IonItemDivider, IonLabel, IonList, IonListHeader, IonNote, IonPage, IonText, IonTitle, IonToolbar } from '@ionic/react';
-
+//Importing core components
+import { 
+  IonCard, 
+  IonCardContent, 
+  IonCardHeader, 
+  IonCardSubtitle, 
+  IonCardTitle, 
+  IonContent, 
+  IonHeader,
+  IonPage, 
+  IonTitle, 
+  IonToolbar } 
+  from '@ionic/react';
 //Import own components
 import Menu from '../components/Menu'
 import MenuButton from '../components/MenuButton';
 //Import style
 import './WorkExperience.css';
 
+//Renders cards with hardcoded workexperience data
 const WorkExperience: React.FC = () => {
   return (
     <>

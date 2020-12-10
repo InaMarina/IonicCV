@@ -1,17 +1,34 @@
+//Importing react + react hooks
 import React, { useEffect, useState} from 'react';
-import { IonContent, IonImg, IonItem, IonButton, IonInput, IonPage,  IonText, IonCard, IonLoading } from '@ionic/react';
-
+//Importing core components
+import { 
+  IonContent, 
+  IonImg, 
+  IonItem, 
+  IonButton, 
+  IonInput, 
+  IonPage,  
+  IonText, 
+  IonCard, 
+  IonLoading } 
+  from '@ionic/react';
+//Importing functions from config file
 import {login, getUser} from '../firebaseConfig'
-
+//Style
 import './Login.css'
+//Importing logopicture
 import logo from '../assets/logo1.png'
 
 const Login: React.FC = () => {
+
+  //StateHooks
   const [loading, setLoading] = useState(false)
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isAuthed, setIsAuthed] = useState(false)
 
+  //useEffect function that checks if user is already logged in
+  //if true -> redirect to profile
   useEffect(() => {
     setLoading(true)
     getUser().then(user => {
@@ -25,23 +42,25 @@ const Login: React.FC = () => {
       setLoading(false)
     })
   }, [])
-
   console.log(isAuthed)
   if(isAuthed === true){
     window.location.href = '/profile' 
-
   } 
 
+  //Function for login that uses the login-function imported from config-file
+  //When async returns and if true, redirects to profile
   const loginUser = async() => {
     setLoading(true)
     const response = await login(email, password)
-
     if(response){
       window.location.href = '/profile' 
     }
     setLoading(false)
   }
 
+  //Renders input fiels for email & password, sets them to state hooks and when button is pressed
+  //launches login. If something goes wrong a toast (in original function in config file) will show error.
+  //register button takes user to register page
   return (
     <IonPage>
       <IonLoading message={'Just a sec..'} duration={0} isOpen={loading}></IonLoading>
